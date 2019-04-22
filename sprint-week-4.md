@@ -14,7 +14,8 @@ Práctica para el sprint de la segunda semana, correspondiente a los temas **6-F
 
 ### Requisitos previos
 
-- Partir de la funcionalidad de la aplicación del sprint 2.
+- Partir de la funcionalidad de la aplicación del sprint 3.
+- Usar: https://api-base.herokuapp.com/api/pub/projects
 
 
 ### Tareas

@@ -46,4 +46,6 @@ Práctica para el sprint de la primera semana, correspondiente a los temas **0-H
 Para principiantes en Git:
 [Git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
 
+### Subid el código a Git y publicad la url del repositorio en la plataforma del curso.
+
 > Recomendación: Seguir los guiones de las lecciones 0 y 1.

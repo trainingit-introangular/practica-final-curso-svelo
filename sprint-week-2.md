@@ -10,9 +10,15 @@ Práctica para el sprint de la segunda semana, correspondiente a los temas **2-S
 
 - Usar distintas rutas y cargarlas de manera dinámica.
 
-- Formulario para recogida de datos
+- Formulario para recogida de datos (nombre de proyecto es suficiente)
 
-- Tabla para presentación
+- Filtro y Tabla para presentación (Listado de proyectos que cumplan la búsqueda)
+
+- Visor de un proyecto (con url paramétrica específica)
+
+- Contador de proyectos en el dashboard
+
+- Enlaces a las demás páginas desde un menú común
 
 ### Requisitos previos
 
@@ -41,7 +47,7 @@ Práctica para el sprint de la segunda semana, correspondiente a los temas **2-S
 
 ### Recursos
 
-Usa estos datos como punto de partida.
+Usa estos datos como punto de partida para la tabla.
 
 ```typescript
 export const environment = {

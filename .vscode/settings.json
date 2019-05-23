@@ -16,14 +16,5 @@
   "tslint.alwaysShowRuleFailuresAsWarnings": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
   "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.quoteStyle": "single",
-  "spellright.language": [
-    "en",
-    "es"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext"
-  ]
+  "typescript.preferences.quoteStyle": "single"
 }

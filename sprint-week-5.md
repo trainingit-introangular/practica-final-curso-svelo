@@ -16,7 +16,7 @@ Práctica para el sprint de la segunda semana, correspondiente a los temas **8-R
 
 ### Requisitos previos
 
-- Partir de la funcionalidad de la aplicación del sprint 2.
+- Partir de la funcionalidad de la aplicación del sprint 4.
 
 
 ### Tareas

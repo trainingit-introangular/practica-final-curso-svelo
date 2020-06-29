@@ -1,0 +1,7 @@
+<input type="text"
+       id="projectName"
+       placeholder="nombre de proyecto"
+       required
+       [(ngModel)]="nameP" />
+<button *ngIf="!nameEmpty()"
+        (click)="saveProject()">Guardar proyecto</button>

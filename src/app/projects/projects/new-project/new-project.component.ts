@@ -1,31 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../../environments/environment';
+import { ProjectsService } from '../../projects.service';
 
-@Component({
+@Component( {
   selector: 'app-new-project',
   templateUrl: './new-project.component.html'
-})
+} )
 export class NewProjectComponent implements OnInit {
   public projects = [];
   public nameP = '';
 
-  constructor() {}
+  constructor( private projectsService: ProjectsService ) { }
 
   ngOnInit(): void {
-    this.projects = environment.projects;
+    this.projects = this.projectsService.projectsService;
   }
 
-  public saveProject(): void {
+  public onSaveProject( nombre: string ): void {
     const cont = this.projects.length + 1;
-    const project = { id: cont, name: this.nameP };
-    this.projects.push(project);
+    const project = { id: cont, name: nombre };
+    this.projects.push( project );
     environment.projects = this.projects;
   }
 
-  public nameEmpty(): Boolean {
-    const l = this.nameP.length;
-    if (l == 0) {
-      return true;
-    } else return false;
-  }
 }

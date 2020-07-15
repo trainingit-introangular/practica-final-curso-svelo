@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../../../environments/environment';
+import { ProjectsService } from '../../projects.service';
 
-@Component({
+@Component( {
   selector: 'app-project-list',
   templateUrl: './project-list.component.html'
-})
+} )
 export class ProjectListComponent implements OnInit {
   public projects = [];
-  constructor() {}
+  constructor( private projectsService: ProjectsService ) { }
 
   ngOnInit(): void {
-    this.projects = environment.projects;
+    this.projects = this.projectsService.projectsService;
   }
 }

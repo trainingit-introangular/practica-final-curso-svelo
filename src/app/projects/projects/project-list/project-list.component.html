@@ -1,3 +1,5 @@
-<li *ngFor="let project of projects">
+<!-- <li *ngFor="let project of projects">
   <a routerLink="{{project.id}}">{{project.id}} {{project.name}}</a>
-</li>
+</li> -->
+
+<app-project-list-details [projects]="projects"></app-project-list-details>

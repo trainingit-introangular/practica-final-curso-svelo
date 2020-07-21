@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
     "boostrap": "^2.0.0",
+    "bootstrap": "^4.5.0",
     "core-js": "^2.5.4",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",

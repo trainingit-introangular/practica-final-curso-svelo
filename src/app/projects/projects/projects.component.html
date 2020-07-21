@@ -5,8 +5,19 @@
   <a routerLink="project/0">{{projects[0].id}} {{projects[0].name}}</a>
   <a routerLink="project/1">{{projects[1].id}} {{projects[1].name}}</a>
 </li> -->
-<button routerLink="projectsList">Lista de proyectos</button>
-<button routerLink="new">Nuevo proyecto</button>
-<button routerLink="/projects">Go project</button>
-<button routerLink="/">Go home</button>
+
+<div class="container">
+  <button type="button"
+          class="btn btn-outline-success"
+          routerLink="/projects">Go project home</button>
+  <button type="button"
+          class="btn btn-outline-success"
+          routerLink="projectsList">Lista de proyectos</button>
+  <button type="button"
+          class="btn btn-outline-success"
+          routerLink="new">Nuevo proyecto</button>
+  <button type="button"
+          class="btn btn-outline-success"
+          routerLink="/">Go home</button>
+</div>
 <router-outlet></router-outlet>

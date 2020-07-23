@@ -9,7 +9,6 @@ const routes: Routes = [
   {
     path: '',
     component: ProjectsComponent,
-    // si lo pongo com childre me funciona bien pero no me recarga la pagina, clico y tengo q hacer F5 para que recargue la pagina ¿por 1que?
     children: [
       {
         path: 'projectsList',

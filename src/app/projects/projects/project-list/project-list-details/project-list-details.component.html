@@ -1,8 +1,18 @@
-<div class="container">
+<div class="container"
+     *ngIf="hasProjects()">
   <li class="list-group"
-      *ngFor="let project of projects">
+      *ngFor="let project of resultado; let i = index ">
     <a class="list-group-item list-group-item-action"
-       routerLink="{{project.id}}">{{project.id}} {{project.name}}</a>
+       routerLink="{{project.name}}">{{i + 1}} {{project.name}}</a>
   </li>
+</div>
 
+<div class="container"
+     *ngIf="!hasProjects()">
+  <h1>No hay ningun projecto a mostrar</h1>
+</div>
+
+<div class="container">
+  <button class="btn btn-outline-danger"
+          (click)="clearAllProjects()">Borrar lista proyectos</button>
 </div>

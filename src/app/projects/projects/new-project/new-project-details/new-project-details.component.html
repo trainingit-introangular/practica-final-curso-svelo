@@ -1,7 +1,17 @@
-<input type="text"
-       id="projectName"
-       placeholder="nombre de proyecto"
-       required
-       [(ngModel)]="nameP" />
-<button *ngIf="!nameEmpty()"
-        (click)="onPropagar()">Guardar proyecto</button>
+<div class="container">
+  <div class="input-group mb-3">
+    <input type="text"
+           id="projectNameTest"
+           [(ngModel)]="nameP"
+           class="form-control"
+           placeholder="Nombre de proyecto"
+           aria-label="Nombre de proyecto"
+           aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-info"
+              type="button"
+              *ngIf="!nameEmpty()"
+              (click)="onPropagar()">Guardar proyecto</button>
+    </div>
+  </div>
+</div>

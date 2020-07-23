@@ -1,1 +1,5 @@
-<h1>Presentador Tengo {{ numProjects }} proyectos</h1>
+<div class="container">
+  <h4 class="display-4">Esta práctica actualmente tiene {{ (numProjects$ |async)?.length  }} proyectos</h4>
+  <button routerLink="projects"
+          class="btn btn-primary">Entrar</button>
+</div>

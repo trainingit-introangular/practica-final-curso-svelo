@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { NewProjectDetailsComponent } from './projects/new-project/new-project-details/new-project-details.component';
 import { NewProjectComponent } from './projects/new-project/new-project.component';
@@ -9,10 +9,15 @@ import { ProjectListComponent } from './projects/project-list/project-list.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { ViewerProjectComponent } from './projects/viewer-project/viewer-project.component';
 
-
-@NgModule( {
-  declarations: [ProjectsComponent, ViewerProjectComponent, NewProjectComponent, ProjectListComponent, ProjectListDetailsComponent, NewProjectDetailsComponent],
-  imports: [CommonModule, ProjectsRoutingModule, FormsModule]
-
-} )
-export class ProjectsModule { }
+@NgModule({
+  declarations: [
+    ProjectsComponent,
+    ViewerProjectComponent,
+    NewProjectComponent,
+    ProjectListComponent,
+    ProjectListDetailsComponent,
+    NewProjectDetailsComponent
+  ],
+  imports: [CommonModule, ProjectsRoutingModule, FormsModule, ReactiveFormsModule]
+})
+export class ProjectsModule {}

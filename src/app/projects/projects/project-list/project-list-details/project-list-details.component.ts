@@ -10,6 +10,7 @@ export class ProjectListDetailsComponent implements OnInit {
   @Input() public projects: [];
   @Input() public apiProjects$: Observable<any> = null;
   public resultado: any;
+  private res: any;
   constructor(private projectsService: ProjectsService) {}
 
   ngOnInit(): void {
@@ -28,8 +29,19 @@ export class ProjectListDetailsComponent implements OnInit {
   }
 
   subscribeProjects() {
-    this.apiProjects$.subscribe(result => {
-      this.resultado = result;
+    this.apiProjects$.subscribe(data => {
+      this.resultado = data;
+      console.log(data);
+      if (data != null) this.mapResult();
+    });
+  }
+  private mapResult() {
+    this.resultado = this.resultado.map(i => {
+      return {
+        name: i.name.projectName,
+        projectDescription: i.name.projectDescription,
+        numTeam: i.name.numTeam
+      };
     });
   }
 }

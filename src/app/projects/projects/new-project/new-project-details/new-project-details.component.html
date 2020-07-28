@@ -1,17 +1,42 @@
 <div class="container">
-  <div class="input-group mb-3">
-    <input type="text"
-           id="projectNameTest"
-           [(ngModel)]="nameP"
-           class="form-control"
-           placeholder="Nombre de proyecto"
-           aria-label="Nombre de proyecto"
-           aria-describedby="basic-addon2">
-    <div class="input-group-append">
-      <button class="btn btn-outline-info"
-              type="button"
-              *ngIf="!nameEmpty()"
-              (click)="onPropagar()">Guardar proyecto</button>
+  <form [formGroup]="projectFG">
+    <div class="col-md-12 col-sm-12">
+      <label class="col-md-3 col-sm-12"
+             for="projectName">Nombre del proyecto</label>
+      <input class="col-md-3 col-sm-12"
+             name="projectName"
+             formControlName="projectName"
+             type="text" />
+      <label class="col-md-3 col-sm-12"
+             for="projectDescription">Descripcion del proyecto</label>
+      <input class="col-md-3 col-sm-12"
+             name="projectDescription"
+             formControlName="projectDescription"
+             type="text" />
     </div>
-  </div>
+    <div class="col-md-12 col-sm-12">
+      <label class="col-md-3 col-sm-12"
+             for="numTeam">Participantes en el proyecto</label>
+      <input class="col-md-3 col-sm-12"
+             name="numTeam"
+             formControlName="numTeam"
+             type="number" />
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <button class="col-md-3 col-sm-12 btn btn-outline-info"
+              type="button"
+              (click)="onPropagar()"
+              [disabled]="projectFG.invalid">Guardar proyecto</button>
+
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="col-md-12 col-sm-12">
+        <span class="col-md-12 col-sm-12">{{ getError('projectName')}}</span>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <span class="col-md-12 col-sm-12">{{ getError('numTeam')}}</span>
+      </div>
+    </div>
+  </form>
+
 </div>

@@ -31,6 +31,5 @@ export class ViewerProjectComponent implements OnInit {
       numTeam: this.resultado.name.numTeam,
       id: this.resultado._id
     };
-    console.log(this.resultado);
   }
 }

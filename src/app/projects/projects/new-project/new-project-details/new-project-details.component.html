@@ -1,47 +1,41 @@
 <div class="container">
   <form [formGroup]="projectFG">
-    <div class="col-md-12 col-sm-12">
-      <label class="col-md-3 col-sm-12"
-             for="projectName">Nombre del proyecto</label>
-      <input class="col-md-3 col-sm-12"
+    <div class="form-group">
+      <label for="projectName">Nombre del proyecto *</label>
+      <input class="form-control"
              name="projectName"
              formControlName="projectName"
              type="text" />
-      <label class="col-md-3 col-sm-12"
-             for="projectDescription">Descripcion del proyecto</label>
-      <input class="col-md-3 col-sm-12"
+    </div>
+    <div class="form-group">
+      <label for="projectDescription">Descripcion del proyecto</label>
+      <input class="form-control"
              name="projectDescription"
              formControlName="projectDescription"
              type="text" />
     </div>
-    <div class="col-md-12 col-sm-12">
-      <label class="col-md-3 col-sm-12"
-             for="numTeam">Participantes en el proyecto</label>
-      <input class="col-md-3 col-sm-12"
+    <div class="form-group">
+      <label for="numTeam">Participantes en el proyecto *</label>
+      <input class="form-control"
              name="numTeam"
              formControlName="numTeam"
              type="number" />
     </div>
-    <div class="col-md-12 col-sm-12">
+    <div class="form-group">
       <button class="col-md-3 col-sm-12 btn btn-outline-info"
               type="button"
               (click)="onPropagar()"
               [disabled]="projectFG.invalid">Guardar proyecto</button>
-
     </div>
-    <div class="col-md-12 col-sm-12"
-         *ngIf="projectFG.invalid">
-      <div class="col-md-12 col-sm-12 alert alert-danger"
-           *ngIf="getError('projectName')!=''">
-        <span class="
+    <div class="col-md-12 col-sm-12 alert alert-danger"
+         *ngIf="getError('projectName')!=''">
+      <span class="
            col-md-12
            col-sm-12">Nombre del proyecto {{ getError('projectName')}}</span>
-      </div>
-      <div class="col-md-12 col-sm-12 alert alert-danger"
-           *ngIf="getError('numTeam')!=''">
-        <span class="col-md-12 col-sm-12">Participantes en el proyecto {{ getError('numTeam')}}</span>
-      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 alert alert-danger"
+         *ngIf="getError('numTeam')!=''">
+      <span class="col-md-12 col-sm-12">Participantes en el proyecto {{ getError('numTeam')}}</span>
     </div>
   </form>
-
 </div>

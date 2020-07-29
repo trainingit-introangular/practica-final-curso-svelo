@@ -52,7 +52,8 @@ export class NewProjectDetailsComponent implements OnInit {
   }
 
   onPropagar() {
-    const nameProject = this.projectFG.value;
-    this.saveProject.emit(nameProject);
+    const project = this.projectFG.value;
+    this.saveProject.emit(project);
+    this.projectFG.reset();
   }
 }

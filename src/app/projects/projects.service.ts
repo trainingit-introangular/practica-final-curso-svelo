@@ -37,6 +37,11 @@ export class ProjectsService {
     return this.httpClient.get<any[]>(this.apiUrl);
   }
 
+  public getProjectById(id: number) {
+    const url = `${this.apiUrl}`;
+    return this.httpClient.get<any[]>(this.apiUrl + '/' + id);
+  }
+
   public postProject(name) {
     this.httpClient.post(this.apiUrl, { name: name }).subscribe();
   }

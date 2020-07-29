@@ -1,3 +1,26 @@
 <div class="container">
-  <h4 class="display-4">{{projectId}}</h4>
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text"
+           class="form-control"
+           id="name"
+           [(ngModel)]="resultado.name"
+           disabled>
+  </div>
+  <div class="form-group">
+    <label for="description">Descripción</label>
+    <input type="text"
+           class="form-control"
+           id="description"
+           [(ngModel)]="resultado.projectDescription"
+           disabled>
+  </div>
+  <div class="form-group">
+    <label for="numTeam">Participantes en el proyecto</label>
+    <input type="text"
+           class="form-control"
+           id="numTeam"
+           [(ngModel)]="resultado.numTeam"
+           disabled>
+  </div>
 </div>

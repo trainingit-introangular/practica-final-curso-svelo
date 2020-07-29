@@ -29,12 +29,17 @@
               [disabled]="projectFG.invalid">Guardar proyecto</button>
 
     </div>
-    <div class="col-md-12 col-sm-12">
-      <div class="col-md-12 col-sm-12">
-        <span class="col-md-12 col-sm-12">{{ getError('projectName')}}</span>
+    <div class="col-md-12 col-sm-12"
+         *ngIf="projectFG.invalid">
+      <div class="col-md-12 col-sm-12 alert alert-danger"
+           *ngIf="getError('projectName')!=''">
+        <span class="
+           col-md-12
+           col-sm-12">Nombre del proyecto {{ getError('projectName')}}</span>
       </div>
-      <div class="col-md-12 col-sm-12">
-        <span class="col-md-12 col-sm-12">{{ getError('numTeam')}}</span>
+      <div class="col-md-12 col-sm-12 alert alert-danger"
+           *ngIf="getError('numTeam')!=''">
+        <span class="col-md-12 col-sm-12">Participantes en el proyecto {{ getError('numTeam')}}</span>
       </div>
     </div>
   </form>

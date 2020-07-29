@@ -31,7 +31,6 @@ export class ProjectListDetailsComponent implements OnInit {
   subscribeProjects() {
     this.apiProjects$.subscribe(data => {
       this.resultado = data;
-      console.log(data);
       if (data != null) this.mapResult();
     });
   }
@@ -40,7 +39,8 @@ export class ProjectListDetailsComponent implements OnInit {
       return {
         name: i.name.projectName,
         projectDescription: i.name.projectDescription,
-        numTeam: i.name.numTeam
+        numTeam: i.name.numTeam,
+        id: i._id
       };
     });
   }

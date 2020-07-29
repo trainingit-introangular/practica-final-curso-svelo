@@ -9,7 +9,12 @@ import { ProjectsService } from '../../projects.service';
 export class ViewerProjectComponent implements OnInit {
   public projectId;
   public project$;
-  public resultado;
+  public resultado = {
+    projectName: '',
+    projectDescription: '',
+    numTeam: null,
+    id: null
+  };
   constructor(activateRoute: ActivatedRoute, private projectsService: ProjectsService) {
     this.projectId = activateRoute.snapshot.params['id'];
   }
@@ -20,16 +25,16 @@ export class ViewerProjectComponent implements OnInit {
 
   subscribeProject() {
     this.project$ = this.projectsService.getProjectById(this.projectId).subscribe(data => {
-      this.resultado = data;
-      if (data != null) this.mapResult();
+      //  this.resultado = data;
+      if (data != null) this.mapResult(data);
     });
   }
-  private mapResult() {
+  private mapResult(data) {
     this.resultado = {
-      name: this.resultado.name.projectName,
-      projectDescription: this.resultado.name.projectDescription,
-      numTeam: this.resultado.name.numTeam,
-      id: this.resultado._id
+      projectName: data.name.projectName,
+      projectDescription: data.name.projectDescription,
+      numTeam: data.name.numTeam,
+      id: data._id
     };
   }
 }

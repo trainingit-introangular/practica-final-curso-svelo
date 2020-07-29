@@ -31,7 +31,7 @@ export class NewProjectDetailsComponent implements OnInit {
       error = { ...error, min: 'at least one person is needed on the team' };
     }
     if (num > 10) {
-      error = { ...error, max: 'the organization does not allow more than 10 people in a team' };
+      error = { ...error, max: 'the organization does not allow more than 10 people in a team ' };
     }
     return error;
   }
